@@ -1,0 +1,17 @@
+.myimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background: url('../tala.jpg');
+    background-size: cover;
+    background-position: top;
+    
+}
+
+.myimg h1{
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+

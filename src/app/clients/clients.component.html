@@ -1,0 +1,102 @@
+<div id="content-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Clients</a>
+        </li>
+        <li class="breadcrumb-item active">Table</li>
+      </ol>
+
+      <!-- DataTables Example -->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-table"></i>
+          All Clients sorted by ID</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Project_Ref</th>
+                  <th>Phone Number</th>
+                  <th>E-mail</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Project_Ref</th>
+                  <th>Phone Number</th>
+                  <th>E-mail</th>
+                  <th>Address</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                  <tr *ngFor = "let client of clients">
+                      <td>{{clients.id}}</td>
+                      <td>{{clients.name}}</td>
+                      <td>{{clients.address}}</td>
+                      <td>{{clients.telephoneNumber}}</td>
+                      <td>{{clients.email}}</td>
+                      <td><a [routerLink]="['/clients', client.id ]">View</a></td>
+                  </tr>
+                <!-- <tr>
+                  <td>01</td>
+                  <td>Mary Afram</td>
+                  <td>P01</td>
+                  <td>0205634565</td>
+                  <td>laribany@gmail.com</td>
+                  <td>Taifa</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Garrett Winters</td>
+                  <td>P04</td>
+                  <td>45677677</td>
+                  <td>gfhdhgf@fyhtdhd.com</td>
+                  <td>Mallam</td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Ashton Cox</td>
+                  <td>P03</td>
+                  <td>66565466</td>
+                  <td>thdfh@gth.com</td>
+                  <td>San Francisco</td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>Cedric Kelly</td>
+                  <td>P02</td>
+                  <td>225646545</td>
+                  <td>fyrdt@fgdf.com</td>
+                  <td>Edinburgh</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Airi Satou</td>
+                  <td>P05</td>
+                  <td>020657766</td>
+                  <td>dssfdg2@ft.com</td>
+                  <td>East Legon</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+
+      <p class="small text-center text-muted my-5">
+        <em>All clients who have their projects with Turntabl</em>
+      </p>
+
+    </div>
+    <!-- /.container-fluid -->
