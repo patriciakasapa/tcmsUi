@@ -9,7 +9,10 @@ import { ClientsComponent } from './clients/clients.component';
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "projects", component: ProjectsComponent},
-  {path: "clients", component: ClientsComponent}
+  {path: "clients", component: ClientsComponent},
+  
+  // To redirect the app to automatically launch from the home page
+  { path: '', redirectTo: "/home", pathMatch: "full"}
 ];
 
 @NgModule({

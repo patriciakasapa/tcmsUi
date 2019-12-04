@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ClientsComponent } from './clients/clients.component';
+import { cServiceService } from './cService.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,12 @@ import { ClientsComponent } from './clients/clients.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    cServiceService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

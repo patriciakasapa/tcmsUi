@@ -17,9 +17,6 @@ export class cServiceService {
 getClients(): Observable<CInterface[]>{
   return this.httpClient.get<CInterface[]>(this.apiURL);
 }
-// getCustomers(): Observable<Customer[]> {
-//   return this.httpClient.get<Customer[]>(this.apiURL);
-// }
 // postCustomer(customer: Customer): Observable<Customer> {
 //   return this.httpClient.post<Customer>(this.apiURL, customer, httpOptions);
 // }
