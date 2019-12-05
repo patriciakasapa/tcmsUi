@@ -8,18 +8,22 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ClientsComponent } from './clients/clients.component';
 import { cServiceService } from './cService.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProjectsComponent,
-    ClientsComponent
+    ClientsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     cServiceService 

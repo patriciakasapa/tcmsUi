@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'; 
 import { CInterface } from './cInterface';
-
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application.json'
+    })
+  };
 @Injectable({
   providedIn: 'root'
 })
@@ -11,16 +15,18 @@ export class cServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
+
+
 // functions to access the data online
 
 //To get all client details
 getClients(): Observable<CInterface[]>{
   return this.httpClient.get<CInterface[]>(this.apiURL);
 }
-// postClient(client: Customer): Observable<Customer> {
-//   return this.httpClient.post<Customer>(this.apiURL, customer, httpOptions);
-// }
-// getCustomerById(id: string): Observable<Customer> {
-//   return this.httpClient.get<Customer>(this.apiURL + id);
-//   }
+postClient(client: CInterface): Observable<CInterface> {
+  return this.httpClient.post<CInterface>(this.apiURL, client, httpOptions);
+}
+getClientById(id: string): Observable<CInterface> {
+  return this.httpClient.get<CInterface>(this.apiURL + id);
+  }
 }

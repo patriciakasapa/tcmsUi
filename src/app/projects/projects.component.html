@@ -20,26 +20,26 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Client_Ref</th>
-                  <th>Start Date</th>
-                  <th>Proposed end date</th>
-                  <th>Actual end date</th>
+                    <th>ID</th>
+                    <th>Project Name</th>
+                    <th>Description</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Client_Ref</th>
-                    <th>Start Date</th>
-                    <th>Proposed end date</th>
-                    <th>Actual end date</th>
+                    <th>Project Name</th>
+                    <th>Description</th>
                 </tr>
               </tfoot>
               <tbody>
-                <tr>
+                  <tr *ngFor = "let project of projects">
+                      <td>{{project.project_id}}</td>
+                      <td>{{project.project_name}}</td>
+                      <td>{{project.description}}</td>
+                      <td><a [routerLink]="['/Projects',project.id ]">View</a></td>
+                  </tr>
+                <!-- <tr>
                   <td>P01</td>
                   <td>Operating System</td>
                   <td>01</td>
@@ -78,7 +78,7 @@
                     <td>2010/06/23</td>
                     <td>2011/04/25</td>
                     <td>2020/07/12</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>
