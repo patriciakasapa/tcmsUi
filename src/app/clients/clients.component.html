@@ -22,30 +22,29 @@
                 <tr>
                   <th>ID</th>
                   <th>Name</th>
-                  <th>Project_Ref</th>
+                  <th>Address</th>
                   <th>Phone Number</th>
                   <th>E-mail</th>
-                  <th>Address</th>
+                
                 </tr>
               </thead>
               <tfoot>
                 <tr>
                   <th>ID</th>
                   <th>Name</th>
-                  <th>Project_Ref</th>
+                  <th>Address</th>
                   <th>Phone Number</th>
                   <th>E-mail</th>
-                  <th>Address</th>
                 </tr>
               </tfoot>
               <tbody>
                   <tr *ngFor = "let client of clients">
-                      <td>{{clients.id}}</td>
-                      <td>{{clients.name}}</td>
-                      <td>{{clients.address}}</td>
-                      <td>{{clients.telephoneNumber}}</td>
-                      <td>{{clients.email}}</td>
-                      <!-- <td><a [routerLink]="['/clients', client.id ]">View</a></td> -->
+                      <td>{{client.id}}</td>
+                      <td>{{client.name}}</td>
+                      <td>{{client.address}}</td>
+                      <td>{{client.telephoneNumber}}</td>
+                      <td>{{client.email}}</td>
+                      <td><a [routerLink]="['/clients', client.id ]">View</a></td>
                   </tr>
                 <!-- <tr>
                   <td>01</td>
